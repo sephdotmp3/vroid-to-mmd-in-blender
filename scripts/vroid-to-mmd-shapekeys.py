@@ -18,6 +18,8 @@
 
 import bpy
 
+# I took these VRoid -> MMD shape key translations from https://github.com/miu200521358/vroid2pmx/blob/main/src/service/VroidExportService.py#L4497
+# I also used this checklist https://docs.google.com/document/d/1dqzjyvJPa845Atbq5oUaWyt19OK_ia0m325nvYddHy4/edit?tab=t.0#heading=h.vk34d6knmkzh
 for key in bpy.context.active_object.mmd_root.vertex_morphs:
     # **Missing visemes:**
     # 
@@ -60,122 +62,122 @@ for key in bpy.context.active_object.mmd_root.vertex_morphs:
     # 上 - UP
     # 下 - Down
     match key.name:
-        case "Fcl_BRW_Fun_R":
-            key.name = "にこり右"
-            key.category = "EYEBROW"
         case "Fcl_BRW_Fun_L":
             key.name = "にこり左"
+            key.category = "EYEBROW"
+        case "Fcl_BRW_Fun_R":
+            key.name = "にこり右"
             key.category = "EYEBROW"
         case "Fcl_BRW_Fun":
             key.name = "にこり"
             key.name_e = "Smily"
             key.category = "EYEBROW"
-        case "Fcl_BRW_Joy_R":
-            key.name = "にこり2右"
-            key.category = "EYEBROW"
         case "Fcl_BRW_Joy_L":
             key.name = "にこり2左"
+            key.category = "EYEBROW"
+        case "Fcl_BRW_Joy_R":
+            key.name = "にこり2右"
             key.category = "EYEBROW"
         case "Fcl_BRW_Joy":
             key.name = "にこり2"
             key.category = "EYEBROW"
-        case "Fcl_BRW_Sorrow_R":
-            key.name = "困る右"
-            key.category = "EYEBROW"
         case "Fcl_BRW_Sorrow_L":
             key.name = "困る左"
+            key.category = "EYEBROW"
+        case "Fcl_BRW_Sorrow_R":
+            key.name = "困る右"
             key.category = "EYEBROW"
         case "Fcl_BRW_Sorrow":
             key.name = "困る"
             key.name_e = "Trouble"
             key.category = "EYEBROW"
-        case "Fcl_BRW_Angry_R":
-            key.name = "怒り右"
-            key.category = "EYEBROW"
         case "Fcl_BRW_Angry_L":
             key.name = "怒り左"
+            key.category = "EYEBROW"
+        case "Fcl_BRW_Angry_R":
+            key.name = "怒り右"
             key.category = "EYEBROW"
         case "Fcl_BRW_Angry":
             key.name = "怒り"
             key.name_e = "Get angry"
             key.category = "EYEBROW"
-        case "Fcl_BRW_Surprised_R":
-            key.name = "驚き右"
-            key.category = "EYEBROW"
         case "Fcl_BRW_Surprised_L":
             key.name = "驚き左"
+            key.category = "EYEBROW"
+        case "Fcl_BRW_Surprised_R":
+            key.name = "驚き右"
             key.category = "EYEBROW"
         case "Fcl_BRW_Surprised":
             key.name = "驚き"
             key.category = "EYEBROW"
-        case "Fcl_EYE_Surprised_R":
-            key.name = "びっくり右"
-            key.category = "EYE"
         case "Fcl_EYE_Surprised_L":
             key.name = "びっくり左"
+            key.category = "EYE"
+        case "Fcl_EYE_Surprised_R":
+            key.name = "びっくり右"
             key.category = "EYE"
         case "Fcl_EYE_Surprised":
             key.name = "びっくり"
             key.name_e = "Ha!!!"
             key.category = "EYE"
-        case "Fcl_EYE_Close_R":
-            key.name = "ｳｨﾝｸ２右"
-            key.name_e = "Wink-c"
             key.category = "EYE"
         case "Fcl_EYE_Close_L":
             key.name = "ウィンク２"
             key.name_e = "Wink-b"
             key.category = "EYE"
+        case "Fcl_EYE_Close_R":
+            key.name = "ｳｨﾝｸ２右"
+            key.name_e = "Wink-c"
         case "Fcl_EYE_Close":
             key.name = "まばたき"
             key.name_e = "Blink"
-            key.category = "EYE"
-        case "Fcl_EYE_Joy_R":
-            key.name = "ウィンク右"
-            key.name_e = "Wink-a"
             key.category = "EYE"
         case "Fcl_EYE_Joy_L":
             key.name = "ウィンク"
             key.name_e = "Wink"
             key.category = "EYE"
+        case "Fcl_EYE_Joy_R":
+            key.name = "ウィンク右"
+            key.name_e = "Wink-a"
+            key.category = "EYE"
         case "Fcl_EYE_Joy":
             key.name = "笑い"
             key.name_e = "Smile"
             key.category = "EYE"
-        case "Fcl_EYE_Fun_R":
-            key.name = "目を細める右"
-            key.category = "EYE"
         case "Fcl_EYE_Fun_L":
             key.name = "目を細める左"
+            key.category = "EYE"
+        case "Fcl_EYE_Fun_R":
+            key.name = "目を細める右"
             key.category = "EYE"
         case "Fcl_EYE_Fun":
             key.name = "目を細める"
             key.category = "EYE"
-        case "Fcl_EYE_Angry_R":
-            key.name = "ｷﾘｯ右"
-            key.category = "EYE"
         case "Fcl_EYE_Angry_L":
             key.name = "ｷﾘｯ左"
+            key.category = "EYE"
+        case "Fcl_EYE_Angry_R":
+            key.name = "ｷﾘｯ右"
             key.category = "EYE"
         case "Fcl_EYE_Angry":
             key.name = "ｷﾘｯ"
             key.name_e = "Kiri-eye"
             key.category = "EYE"
-        case "Fcl_EYE_Sorrow_R":
-            key.name = "じと目右"
-            key.category = "EYE"
         case "Fcl_EYE_Sorrow_L":
             key.name = "じと目左"
+            key.category = "EYE"
+        case "Fcl_EYE_Sorrow_R":
+            key.name = "じと目右"
             key.category = "EYE"
         case "Fcl_EYE_Sorrow":
             key.name = "じと目"
             key.name_e = "Jito-eye"
             key.category = "EYE"
-        case "Fcl_EYE_Spread_R":
-            key.name = "上瞼↑右"
-            key.category = "EYE"
         case "Fcl_EYE_Spread_L":
             key.name = "上瞼↑左"
+            key.category = "EYE"
+        case "Fcl_EYE_Spread_R":
+            key.name = "上瞼↑右"
             key.category = "EYE"
         case "Fcl_EYE_Spread":
             key.name = "上瞼↑"
@@ -183,44 +185,44 @@ for key in bpy.context.active_object.mmd_root.vertex_morphs:
         case "Fcl_EYE_Natural":
             key.name = "ナチュラル"
             key.category = "EYE"
-        case "Fcl_EYE_Iris_Hide":
-            key.name = "白目"
+        case "Fcl_EYE_Iris_Hide_L":
+            key.name = "白目左"
             key.category = "EYE"
         case "Fcl_EYE_Iris_Hide_R":
             key.name = "白目右"
             key.category = "EYE"
-        case "Fcl_EYE_Iris_Hide_L":
-            key.name = "白目左"
-            key.category = "EYE"
-        case "Fcl_EYE_Highlight_Hide":
-            key.name = "ハイライトなし"
-            key.category = "EYE"
-        case "Fcl_EYE_Highlight_Hide_R":
-            key.name = "ハイライトなし右"
+        case "Fcl_EYE_Iris_Hide":
+            key.name = "白目"
             key.category = "EYE"
         case "Fcl_EYE_Highlight_Hide_L":
             key.name = "ハイライトなし左"
             key.category = "EYE"
+        case "Fcl_EYE_Highlight_Hide_R":
+            key.name = "ハイライトなし右"
+            key.category = "EYE"
+        case "Fcl_EYE_Highlight_Hide":
+            key.name = "ハイライトなし"
+            key.category = "EYE"
         case "Fcl_MTH_A":
             key.name = "あ"
             key.name_e = "a"
-            key.category = "MOUTH" # TODO: this might be incorrect
+            key.category = "MOUTH"
         case "Fcl_MTH_I":
             key.name = "い"
             key.name_e = "i"
-            key.category = "MOUTH" # TODO: this might be incorrect
+            key.category = "MOUTH"
         case "Fcl_MTH_U":
             key.name = "う"
             key.name_u = "u"
-            key.category = "MOUTH" # TODO: this might be incorrect
+            key.category = "MOUTH"
         case "Fcl_MTH_E":
             key.name = "え"
             key.name_e = "e"
-            key.category = "MOUTH" # TODO: this might be incorrect
+            key.category = "MOUTH"
         case "Fcl_MTH_O":
             key.name = "お"
             key.name_e = "o"
-            key.category = "MOUTH" # TODO: this might be incorrect
+            key.category = "MOUTH"
         case "Fcl_MTH_Neutral":
             key.name = "ん"
             key.name_e = "n"
@@ -234,11 +236,11 @@ for key in bpy.context.active_object.mmd_root.vertex_morphs:
         case "Fcl_MTH_Down":
             key.name = "口下"
             key.category = "MOUTH"
-        case "Fcl_MTH_Angry_R":
-            key.name = "Λ右"
-            key.category = "MOUTH"
         case "Fcl_MTH_Angry_L":
             key.name = "Λ左"
+            key.category = "MOUTH"
+        case "Fcl_MTH_Angry_R":
+            key.name = "Λ右"
             key.category = "MOUTH"
         case "Fcl_MTH_Angry":
             key.name = "Λ"
@@ -250,11 +252,11 @@ for key in bpy.context.active_object.mmd_root.vertex_morphs:
             key.name = "口横広げ"
             key.name_e = "MouseWD"
             key.category = "MOUTH"
-        case "Fcl_MTH_Fun_R":
-            key.name = "にっこり右"
-            key.category = "MOUTH"
         case "Fcl_MTH_Fun_L":
             key.name = "にっこり左"
+            key.category = "MOUTH"
+        case "Fcl_MTH_Fun_R":
+            key.name = "にっこり右"
             key.category = "MOUTH"
         case "Fcl_MTH_Fun":
             key.name = "にっこり"
@@ -263,11 +265,11 @@ for key in bpy.context.active_object.mmd_root.vertex_morphs:
         case "Fcl_MTH_Joy":
             key.name = "ワ"
             key.name_e = "Wa"
-            key.category = "MOUTH" # TODO: this might be incorrect
+            key.category = "MOUTH"
         case "Fcl_MTH_Sorrow":
             key.name = "▲"
             key.name_e = "Mouse_1"
-            key.category = "MOUTH" # TODO: this might be incorrect
+            key.category = "MOUTH"
         case "Fcl_MTH_Surprised":
             key.name = "わー頂点"
             key.category = "MOUTH"
@@ -283,20 +285,20 @@ for key in bpy.context.active_object.mmd_root.vertex_morphs:
         case "Fcl_HA_Fung1":
             key.name = "牙"
             key.category = "MOUTH"
-        case "Fcl_HA_Fung1_Up_R":
-            key.name = "牙上右"
-            key.category = "MOUTH"
         case "Fcl_HA_Fung1_Up_L":
             key.name = "牙上左"
+            key.category = "MOUTH"
+        case "Fcl_HA_Fung1_Up_R":
+            key.name = "牙上右"
             key.category = "MOUTH"
         case "Fcl_HA_Fung1_Up":
             key.name = "牙上"
             key.category = "MOUTH"
-        case "Fcl_HA_Fung1_Low_R":
-            key.name = "牙下右"
-            key.category = "MOUTH"
         case "Fcl_HA_Fung1_Low_L":
             key.name = "牙下左"
+            key.category = "MOUTH"
+        case "Fcl_HA_Fung1_Low_R":
+            key.name = "牙下右"
             key.category = "MOUTH"
         case "Fcl_HA_Fung1_Low":
             key.name = "牙下"
