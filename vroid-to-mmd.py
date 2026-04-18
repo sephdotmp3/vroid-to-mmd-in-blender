@@ -1,3 +1,21 @@
+# vroid-to-mmd.py
+# This file is part of VRoid to MMD in Blender
+#
+# Copyright (C) 2026 sephdotwmv
+#
+# VRoid to MMD in Blender is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# VRoid to MMD in Blender is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with VRoid to MMD in Blender; if not, see <https://www.gnu.org/licenses/>.
+
 import bpy
 
 for key in bpy.context.active_object.mmd_root.vertex_morphs:
