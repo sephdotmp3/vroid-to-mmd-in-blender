@@ -1,4 +1,4 @@
-# vroid-to-mmd.py
+# vroid-to-mmd-shapekeys.py
 # This file is part of VRoid to MMD in Blender
 #
 # Copyright (C) 2026 sephdotwmv
